@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrera de Tipeo - Buenos Aires</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="loading-screen">
+            <h1>Carrera de Tipeo - Buenos Aires</h1>
+            <div class="spinner"></div>
+            <p>Cargando...</p>
+        </div>
+        
+        <div id="start-screen">
+            <h1>Carrera de Tipeo - Buenos Aires</h1>
+            <p>¡Compite contra oponentes escribiendo chistes para acelerar!</p>
+            <button id="start-button">¡Comenzar carrera!</button>
+        </div>
+        
+        <div id="game-ui">
+            <div id="typing-container">
+                <div id="joke-display"></div>
+                <div id="typing-input-container">
+                    <span id="typed-text"></span>
+                    <span id="current-char" class="blink"></span>
+                    <span id="remaining-text"></span>
+                </div>
+            </div>
+            <div id="stats">
+                <div class="stat">Posición: <span id="position">1°</span></div>
+                <div class="stat">Velocidad: <span id="speed">0</span> km/h</div>
+            </div>
+        </div>
+        
+        <div id="end-screen" class="hidden">
+            <h1>¡Carrera finalizada!</h1>
+            <div id="final-position"></div>
+            <button id="restart-button">Volver a jugar</button>
+        </div>
+    </div>
+    
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>

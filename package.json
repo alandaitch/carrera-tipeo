@@ -1,0 +1,17 @@
+{
+  "name": "juego-carrera",
+  "version": "1.0.0",
+  "description": "Juego de carrera de autos en Buenos Aires con mecánica de tipeo",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "three": "^0.160.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.10"
+  },
+  "type": "module"
+}

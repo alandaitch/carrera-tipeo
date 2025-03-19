@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #222;
+}
+
+#game-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Loading Screen */
+#loading-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 100;
+}
+
+.spinner {
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 5px solid #fff;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px 0;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Start Screen */
+#start-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 90;
+    text-align: center;
+    padding: 20px;
+}
+
+#start-screen h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ffdd00;
+    text-shadow: 0 0 10px rgba(255, 221, 0, 0.7);
+}
+
+#start-screen p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+#start-button, #restart-button {
+    background-color: #ffdd00;
+    color: #222;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+#start-button:hover, #restart-button:hover {
+    background-color: #fff;
+    transform: scale(1.05);
+}
+
+/* Game UI */
+#game-ui {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    color: white;
+    z-index: 80;
+    pointer-events: none;
+}
+
+#typing-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+#joke-display {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #aaa;
+}
+
+#typing-input-container {
+    font-size: 1.5rem;
+    min-height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#typed-text {
+    color: #4caf50;
+}
+
+#current-char {
+    color: #ffdd00;
+    position: relative;
+}
+
+.blink {
+    animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+#remaining-text {
+    color: #ddd;
+    opacity: 0.8;
+}
+
+#stats {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.stat {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* End Screen */
+#end-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 95;
+    text-align: center;
+}
+
+#end-screen h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ffdd00;
+}
+
+#final-position {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.hidden {
+    display: none !important;
+}
